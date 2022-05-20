@@ -1,0 +1,39 @@
+* {
+    font-family: 'Roboto';
+}
+
+.link {
+    color: $accentColor;
+    text-decoration: none;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 0px;
+
+    width: 408px;
+    height: 378.99px;
+
+    background: #FFF;
+    border: 1px solid $neutralGreyColor;
+    border-radius: 4px;
+
+    img {
+        width: 408px;
+        height: 254.99px;
+    }
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1px 8px;
+    gap: 10px;
+    width: 77px;
+    height: 22px;
+    background: $goldenPurpleColorLight;
+    border: 1px solid $goldenPurpleColor;
+    border-radius: 2px;
+}

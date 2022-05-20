@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import EventCardFull from './components/EventCardFull';
+import EventCardList from './pages/EventCardList';
+import MyEvents from './pages/MyEvents';
+import Layout from './features/Layout';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<EventCardList />} />
+          <Route path="/events" element={<EventCardList />} />
+          <Route path="/calendar" element={<MyEvents />} />
+          <Route path="/events/:id" element={<EventCardFull />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
